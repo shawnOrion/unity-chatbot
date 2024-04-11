@@ -27,12 +27,10 @@ public class MessageService : MonoBehaviour
     {
         ChatPayload payload = new ChatPayload(chat);
         string jsonPayload = JsonUtility.ToJson(payload);
-        // log the apyload
         Debug.Log($"Payload: {jsonPayload}");
         StartCoroutine(GetMessagesCoroutine($"{baseURL}messages", jsonPayload, onSuccess, onFailure));
     }
 
-    // Unified method for sending messages
     private IEnumerator SendMessageCoroutine(string url, string jsonPayload, Action<Message> onSuccess, Action<string> onFailure)
     {
         using (UnityWebRequest request = new UnityWebRequest(url, "POST")) 

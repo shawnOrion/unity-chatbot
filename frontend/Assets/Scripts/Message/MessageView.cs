@@ -46,7 +46,6 @@ public class MessageView : MonoBehaviour
         TextMeshProUGUI contentText = newMessageEl.transform.Find("Content").GetComponent<TextMeshProUGUI>();
         contentText.text = message.content;
     
-        // Scroll to the bottom after a screen update
         StartCoroutine(ScrollToBottomNextFrame());
     }
 

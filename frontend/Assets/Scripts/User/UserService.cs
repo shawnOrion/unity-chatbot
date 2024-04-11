@@ -7,7 +7,6 @@ public class UserService : MonoBehaviour
 {
     private readonly string baseURL = "https://unity-chatbot-8b1c8c5398d8.herokuapp.com/";
 
-    // Method to create a user
     public void CreateUser(string email, Action<User> onSuccess, Action<string> onFailure)
     {
         UserPayload payload = new UserPayload(email);
@@ -16,7 +15,6 @@ public class UserService : MonoBehaviour
         StartCoroutine(SendRequest($"{baseURL}user", "POST", jsonPayload, onSuccess, onFailure));
     }
 
-    // Method to retrieve a user
     public void GetUser(string email, Action<User> onSuccess, Action<string> onFailure)
     {
         UserPayload payload = new UserPayload(email);
@@ -24,7 +22,6 @@ public class UserService : MonoBehaviour
         StartCoroutine(SendRequest($"{baseURL}user", "GET", jsonPayload, onSuccess, onFailure));
     }
 
-    // Generalized coroutine for sending web requests
     private IEnumerator SendRequest(string url, string method, string jsonPayload, Action<User> onSuccess, Action<string> onFailure)
     {
         using (UnityWebRequest request = new UnityWebRequest(url, method))

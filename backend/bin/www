@@ -5,7 +5,7 @@
  */
 
 var app = require("../app");
-var debug = require("debug")("unity_chatbot:server");
+var debug = require("debug")("unity-chatbot:server");
 var http = require("http");
 
 /**
