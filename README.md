@@ -1,6 +1,6 @@
 # Project Notes
 ### What does the project do?
-This project has a chat interface where users can interact with an AI, like ChatGPT. It allows for continuous conversations, enabling users to pick up where they left off in previous chats.
+This project has a chat interface where users can interact with an AI, like ChatGPT. It allows for conversations that carry on across multiple sessions, so users can pick up where they left off in previous chats.
 
 ### Why is this project important?
 I took this project on to blend my full-stack knowledge with Unity, pushing myself to create with technologies that are new to me. It’s about building something complex and learning through the process.
